@@ -14,4 +14,5 @@ while True:
     if user_input == 'q':
         break
     else:
-        
+        if tokens[0] == "+":
+            print add(int(tokens[1]), int(tokens[2]))
