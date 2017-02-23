@@ -3,7 +3,7 @@ def add(num_list):
     return reduce((lambda x, y: x + y), num_list)
 
 
-def subtract(num1, num2):
+def subtract(num_list):
     """Return the difference of two numbers"""
     return reduce((lambda x, y: x - y), num_list)
 
