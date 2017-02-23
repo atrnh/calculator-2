@@ -18,7 +18,7 @@ while True:
         try:
             num1 = int(tokens[1])
             num2 = int(tokens[2])
-        except:
+        except IndexError:
             num1 = int(tokens[1])
 
         if operator == "+":
