@@ -1,21 +1,21 @@
 def add(num_list):
     """Returns sum of all integers in list"""
-    return reduce((lambda x, y: x + y), num_list)
+    return reduce((lambda memo, num: memo + num), num_list)
 
 
 def subtract(num_list):
-    """Return the difference of two numbers"""
-    return reduce((lambda x, y: x - y), num_list)
+    """Return the difference of all integers in the list"""
+    return reduce((lambda memo, num: memo - num), num_list)
 
 
 def multiply(num_list):
-    """Return the product of two numbers"""
-    return reduce((lambda x, y: x * y), num_list)
+    """Return the product of all integers in the list"""
+    return reduce((lambda memo, num: memo * num), num_list)
 
 
 def divide(num_list):
-    """Return the quotient of two numbers as a float"""
-    return reduce((lambda x, y: float(x) / y), num_list)
+    """Return the quotient of all integers in the list"""
+    return reduce((lambda memo, num: float(memo) / num), num_list)
 
 
 def square(num):
@@ -28,11 +28,11 @@ def cube(num):
     return num ** 3
 
 
-def power(num, exponent):
-    """Return num raised to the power of exponent"""
-    return num ** exponent
+def power(num_list):
+    """Return num raised to the power of all integers in the list"""
+    return reduce((lambda memo, exponent: memo ** exponent), num_list)
 
 
 def mod(num_list):
-    """Return remainder of num1 divided by num2"""
-    return num1 % num2
+    """Mod takes a list of numbers and return the remainder"""
+    return memo % num

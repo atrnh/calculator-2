@@ -39,11 +39,11 @@ while True:
             print multiply(num_list)
         elif operator == '/':
             print divide(num_list)
-        # elif operator == 'square':
-        #     print square(num1)
-        # elif operator == 'cube':
-        #     print cube(num1)
-        # elif operator == 'pow':
-        #     print power(num1, num2)
+        elif operator == 'square':
+            print square(num_list[0])
+        elif operator == 'cube':
+            print cube(num_list[0])
+        elif operator == 'pow':
+            print power(num_list)
         # elif operator == 'mod':
         #     print mod(num1, num2)
