@@ -13,25 +13,27 @@ while True:
 
     if user_input == 'q':
         break
-    elif tokens.len() == 2:
-        operation = tokens[0]
-        num1 = int(tokens[1])
+    else:
+        operator = tokens[0]
+        try:
+            num1 = int(tokens[1])
+            num2 = int(tokens[2])
+        except:
+            num1 = int(tokens[1])
 
-        if operation == 'square':
+        if operator == "+":
+            print add(num1, num2)
+        elif operator == '-':
+            print subtract(num1, num2)
+        elif operator == '*':
+            print multiply(num1, num2)
+        elif operator == '/':
+            print divide(num1, num2)
+        elif operator == 'square':
             print square(num1)
-        elif operation == 'cube':
+        elif operator == 'cube':
             print cube(num1)
-
-    elif tokens[0] == "+":
-        print add(int(tokens[1]), int(tokens[2]))
-    elif tokens[0] == '-':
-        print subtract(int(tokens[1]), int(tokens[2]))
-    elif tokens[0] == '*':
-        print multiply(int(tokens[1]), int(tokens[2]))
-    elif tokens[0] == '/':
-        print divide(int(tokens[1]), int(tokens[2]))
-
-    elif tokens[0] == 'pow':
-        print power(int(tokens[1]), int(tokens[2]))
-    elif tokens[0] == 'mod':
-        print mod(int(tokens[1]), int(tokens[2])) 
+        elif operator == 'pow':
+            print power(num1, num2)
+        elif operator == 'mod':
+            print mod(num1, num2)
