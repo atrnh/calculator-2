@@ -25,3 +25,5 @@ while True:
         print square(int(tokens[1]))
     elif tokens[0] == 'cube':
         print cube(int(tokens[1]))
+    elif tokens[0] == 'pow':
+        print power(int(tokens[1]), int(tokens[2]))
