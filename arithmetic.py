@@ -8,14 +8,14 @@ def subtract(num_list):
     return reduce((lambda x, y: x - y), num_list)
 
 
-def multiply(num1, num2):
+def multiply(num_list):
     """Return the product of two numbers"""
-    return num1 * num2
+    return reduce((lambda x, y: x * y), num_list)
 
 
-def divide(num1, num2):
+def divide(num_list):
     """Return the quotient of two numbers as a float"""
-    return float(num1) / float(num2)
+    return reduce((lambda x, y: float(x) / y), num_list)
 
 
 def square(num):
@@ -33,6 +33,6 @@ def power(num, exponent):
     return num ** exponent
 
 
-def mod(num1, num2):
+def mod(num_list):
     """Return remainder of num1 divided by num2"""
     return num1 % num2

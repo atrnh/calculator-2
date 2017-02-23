@@ -35,10 +35,10 @@ while True:
 
         elif operator == '-':
             print subtract(num_list)
-        # elif operator == '*':
-        #     print multiply(num1, num2)
-        # elif operator == '/':
-        #     print divide(num1, num2)
+        elif operator == '*':
+            print multiply(num_list)
+        elif operator == '/':
+            print divide(num_list)
         # elif operator == 'square':
         #     print square(num1)
         # elif operator == 'cube':
