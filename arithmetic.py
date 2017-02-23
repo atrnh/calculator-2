@@ -35,4 +35,4 @@ def power(num_list):
 
 def mod(num_list):
     """Mod takes a list of numbers and return the remainder"""
-    return memo % num
+    return reduce((lambda memo, num: memo % num), num_list)
