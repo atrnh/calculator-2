@@ -5,7 +5,7 @@ def add(num_list):
 
 def subtract(num1, num2):
     """Return the difference of two numbers"""
-    return num1 - num2
+    return reduce((lambda x, y: x - y), num_list)
 
 
 def multiply(num1, num2):

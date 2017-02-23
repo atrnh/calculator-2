@@ -17,8 +17,8 @@ while True:
         # Remove operator from tokens list
         operator = tokens.pop(0)
         # Turn list of strings into list of integers
-        num_list = list(map(lambda x: int(x), tokens))
-        # num_list = [int(num) for num in tokens]
+        # num_list = list(map(lambda x: int(x), tokens))
+        num_list = [int(num) for num in tokens]
 
         # try:
         #     num1 = int(tokens[1])
@@ -33,8 +33,8 @@ while True:
         # all of this other stuff in the bottom
         # is broken now
 
-        # elif operator == '-':
-        #     print subtract(num1, num2)
+        elif operator == '-':
+            print subtract(num_list)
         # elif operator == '*':
         #     print multiply(num1, num2)
         # elif operator == '/':
