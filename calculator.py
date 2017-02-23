@@ -14,7 +14,9 @@ while True:
     if user_input == 'q':
         break
     else:
+        # Remove operator from tokens list
         operator = tokens.pop(0)
+        # Turn list of strings into list of integers
         num_list = list(map(lambda x: int(x), tokens))
         # num_list = [int(num) for num in tokens]
 
@@ -25,11 +27,7 @@ while True:
         #     num1 = int(tokens[1])
 
         if operator == "+":
-            print add(num1, num2)
-            # TO DO:
-            # change arguments in add() to reflect
-            # changes made in arithmetic.py
-            # add now takes a list of integers
+            print add(num_list)
 
         # TO DO:
         # all of this other stuff in the bottom
