@@ -8,8 +8,8 @@ calculator program yourself in this file.
 from arithmetic import *
 
 
-print "Instructions: type 'q' to quit and 'd' to change how many decimal" \
-      "you want to see"
+print "Instructions: type 'q' to quit and 'd' to change how many decimal " \
+      "places you want to see"
 
 precision = 2
 valid_operators = [
@@ -34,18 +34,25 @@ while True:
         print 'Your precision is now %i' % precision
         continue
     else:
-        while len(tokens) > 1:
+        while len(tokens) > 0:
             token = tokens.pop()
             if token not in valid_operators:
                 stack.append(token)
             elif token in valid_operators:
                 try:
-                    num1 = stack.pop()
-                    num2 = stack.pop()
+                    num1 = int(stack.pop())
+                    num2 = int(stack.pop())
                 except:
                     print "Illegal number of operands. Try again."
 
                 if token is '+':
                     stack.append(add([num1, num2]))
                 elif token is '-':
-                    stack.append()
+                    stack.append(subtract([num1, num2]))
+                elif token is '*':
+                    stack.append(multiply([num1, num2]))
+                elif token is '/':
+                    stack.append(divide([num1, num2]))
+                elif token is '%':
+                    stack.append(mod([num1, num2]))
+        print stack[0]
